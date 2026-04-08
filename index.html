@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>科研助理导航</title>
+    <title>个人科研助理</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -11,8 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#165DFF',
-                        neutral: '#F5F7FA'
+                        primary: '#165DFF'
                     }
                 }
             }
@@ -20,200 +19,134 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .card-hover {
-                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-            }
-            .section-title {
-                @apply text-lg md:text-xl font-semibold text-gray-800 mb-3 flex items-center gap-2;
-            }
+            .card-hover { @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1; }
+            .section-title { @apply text-lg md:text-xl font-semibold text-gray-800 mb-3 flex items-center gap-2; }
         }
     </style>
 </head>
-<body class="bg-neutral min-h-screen">
+<body class="bg-gray-50 min-h-screen">
 <div class="max-w-7xl mx-auto px-4 py-8">
     <header class="text-center mb-10">
-        <h1 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-primary mb-2">🧪 科研助理导航</h1>
-        <p class="text-gray-500">一站式工具集合 · 本地使用 · 访问计数</p>
+        <h1 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-primary mb-2">🧪 个人科研助理导航</h1>
+        <p class="text-gray-500">纯本地 · 无后端 · 可计数 · 易维护</p>
     </header>
-
-    <!-- 绘图工具 -->
-    <section class="mb-12">
-        <h2 class="section-title"><i class="fa fa-paint-brush text-primary"></i> 科研绘图工具</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="tool-card" data-url="https://mermaid.nodejs.cn" data-name="Mermaid">
-                <i class="fa fa-code-fork text-2xl text-blue-500"></i>
-                <p class="text-sm mt-2">Mermaid</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://flourish.studio" data-name="Flourish">
-                <i class="fa fa-line-chart text-2xl text-green-600"></i>
-                <p class="text-sm mt-2">Flourish</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.bic.ac.cn/ImageGP" data-name="ImageGP">
-                <i class="fa fa-bar-chart text-2xl text-red-500"></i>
-                <p class="text-sm mt-2">ImageGP</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://github.com/Tong-Chen/s-plot" data-name="s-plot">
-                <i class="fa fa-area-chart text-2xl text-orange-500"></i>
-                <p class="text-sm mt-2">s-plot</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.bic.ac.cn/EVenn/" data-name="E-Venn">
-                <i class="fa fa-circle-o text-2xl text-purple-500"></i>
-                <p class="text-sm mt-2">E-Venn</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://chiplot.online" data-name="ChiPlot">
-                <i class="fa fa-pie-chart text-2xl text-teal-500"></i>
-                <p class="text-sm mt-2">ChiPlot</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.rawgraphs.io" data-name="RAWgraphs">
-                <i class="fa fa-cubes text-2xl text-indigo-500"></i>
-                <p class="text-sm mt-2">RAWgraphs</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.graphpad.com/" data-name="GraphPad Prism">
-                <i class="fa fa-square text-2xl text-red-600"></i>
-                <p class="text-sm mt-2">GraphPad</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://biorender.com/" data-name="BioRender">
-                <i class="fa fa-flask text-2xl text-pink-500"></i>
-                <p class="text-sm mt-2">BioRender</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://matplotlib.org/" data-name="Matplotlib">
-                <i class="fa fa-python text-2xl text-blue-600"></i>
-                <p class="text-sm mt-2">Matplotlib</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 学术搜索 -->
-    <section class="mb-10">
-        <h2 class="section-title"><i class="fa fa-search text-primary"></i> 学术搜索</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="tool-card" data-url="https://scholar.google.com" data-name="谷歌学术">
-                <i class="fa fa-google text-2xl text-blue-600"></i>
-                <p class="text-sm mt-2">谷歌学术</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://arxiv.org" data-name="arXiv">
-                <i class="fa fa-book text-2xl text-orange-500"></i>
-                <p class="text-sm mt-2">arXiv</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.cnki.net" data-name="知网">
-                <i class="fa fa-file-text text-2xl text-red-500"></i>
-                <p class="text-sm mt-2">知网</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 数据处理 -->
-    <section class="mb-10">
-        <h2 class="section-title"><i class="fa fa-table text-primary"></i> 数据 & 计算</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="tool-card" data-url="https://www.wolframalpha.com" data-name="Wolfram">
-                <i class="fa fa-calculator text-2xl text-indigo-500"></i>
-                <p class="text-sm mt-2">Wolfram</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.spsspro.com" data-name="SPSSPRO">
-                <i class="fa fa-bar-chart text-2xl text-teal-500"></i>
-                <p class="text-sm mt-2">SPSSPRO</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 邮箱 -->
-    <section class="mb-10">
-        <h2 class="section-title"><i class="fa fa-envelope text-primary"></i> 邮箱</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="tool-card" data-url="https://mail.163.com" data-name="163邮箱">
-                <i class="fa fa-envelope-o text-2xl text-gray-600"></i>
-                <p class="text-sm mt-2">163邮箱</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://mail.google.com" data-name="Gmail">
-                <i class="fa fa-google text-2xl text-red-500"></i>
-                <p class="text-sm mt-2">Gmail</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 常用主页 -->
-    <section class="mb-10">
-        <h2 class="section-title"><i class="fa fa-home text-primary"></i> 常用主页</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="tool-card" data-url="https://github.com" data-name="GitHub">
-                <i class="fa fa-github text-2xl text-black"></i>
-                <p class="text-sm mt-2">GitHub</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.baidu.com" data-name="百度">
-                <i class="fa fa-search text-2xl text-blue-500"></i>
-                <p class="text-sm mt-2">百度</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- 娱乐 -->
-    <section class="mb-10">
-        <h2 class="section-title"><i class="fa fa-gamepad text-primary"></i> 娱乐</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <div class="tool-card" data-url="https://www.youku.com/ku/webhome" data-name="优酷">
-                <i class="fa fa-play-circle text-2xl text-red-500"></i>
-                <p class="text-sm mt-2">优酷</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.bilibili.com" data-name="哔哩哔哩">
-                <i class="fa fa-film text-2xl text-pink-500"></i>
-                <p class="text-sm mt-2">哔哩哔哩</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-            <div class="tool-card" data-url="https://www.xiaohongshu.com" data-name="小红书">
-                <i class="fa fa-heart text-2xl text-orange-500"></i>
-                <p class="text-sm mt-2">小红书</p>
-                <span class="text-xs text-gray-400 count">0 次</span>
-            </div>
-        </div>
-    </section>
+    <div id="tool-container"></div>
 </div>
 
 <script>
-// 初始化计数
-function initCount() {
-    document.querySelectorAll('.tool-card').forEach(card => {
-        const name = card.dataset.name
-        const key = `count_${name}`
-        const count = localStorage.getItem(key) || 0
-        card.querySelector('.count').innerText = count + ' 次'
-    })
+// ==============================================
+// 🔴 所有链接都在这里，修改这里即可！
+// ==============================================
+const toolList = [
+    {
+        section: "科研绘图工具",
+        icon: "paint-brush",
+        items: [
+            { name: "Mermaid",        url: "https://mermaid.nodejs.cn",          icon: "code-fork",    color: "blue-500" },
+            { name: "Flourish",       url: "https://flourish.studio",            icon: "line-chart",   color: "green-600" },
+            { name: "ImageGP",       url: "https://www.bic.ac.cn/ImageGP",      icon: "bar-chart",    color: "red-500" },
+            { name: "s-plot",        url: "https://github.com/Tong-Chen/s-plot",icon: "area-chart",   color: "orange-500" },
+            { name: "E-Venn",        url: "https://www.bic.ac.cn/EVenn/",       icon: "circle-o",     color: "purple-500" },
+            { name: "ChiPlot",       url: "https://chiplot.online",             icon: "pie-chart",    color: "teal-500" },
+            { name: "RAWgraphs",     url: "https://www.rawgraphs.io",           icon: "cubes",        color: "indigo-500" },
+            { name: "GraphPad",      url: "https://www.graphpad.com/",          icon: "square",       color: "red-600" },
+            { name: "BioRender",     url: "https://biorender.com/",             icon: "flask",        color: "pink-500" },
+            { name: "Matplotlib",    url: "https://matplotlib.org/",            icon: "python",       color: "blue-600" },
+        ]
+    },
+    {
+        section: "学术搜索",
+        icon: "search",
+        items: [
+            { name: "谷歌学术",      url: "https://scholar.google.com",         icon: "google",       color: "blue-600" },
+            { name: "arXiv",         url: "https://arxiv.org",                  icon: "book",         color: "orange-500" },
+            { name: "知网",          url: "https://www.cnki.net",               icon: "file-text",    color: "red-500" },
+        ]
+    },
+    {
+        section: "数据 & 计算",
+        icon: "table",
+        items: [
+            { name: "Wolfram",       url: "https://www.wolframalpha.com",       icon: "calculator",   color: "indigo-500" },
+            { name: "SPSSPRO",       url: "https://www.spsspro.com",            icon: "bar-chart",    color: "teal-500" },
+        ]
+    },
+    {
+        section: "邮箱",
+        icon: "envelope",
+        items: [
+            { name: "163邮箱",       url: "https://mail.163.com",               icon: "envelope-o",    color: "gray-600" },
+            { name: "Gmail",         url: "https://mail.google.com",            icon: "google",       color: "red-500" },
+        ]
+    },
+    {
+        section: "常用主页",
+        icon: "home",
+        items: [
+            { name: "GitHub",        url: "https://github.com",                 icon: "github",       color: "black" },
+            { name: "百度",          url: "https://www.baidu.com",              icon: "search",       color: "blue-500" },
+        ]
+    },
+    {
+        section: "娱乐",
+        icon: "gamepad",
+        items: [
+            { name: "优酷",          url: "https://www.youku.com/ku/webhome",   icon: "play-circle",  color: "red-500" },
+            { name: "哔哩哔哩",      url: "https://www.bilibili.com",           icon: "film",         color: "pink-500" },
+            { name: "小红书",        url: "https://www.xiaohongshu.com",       icon: "heart",        color: "orange-500" },
+        ]
+    }
+];
+
+function initCount(name) {
+    const key = `count_${name}`;
+    return localStorage.getItem(key) || 0;
 }
 
-// 卡片样式 + 点击事件
-document.querySelectorAll('.tool-card').forEach(card => {
-    card.classList.add('bg-white','p-4','rounded-xl','flex','flex-col','items-center','card-hover','cursor-pointer')
-    card.addEventListener('click', () => {
-        const name = card.dataset.name
-        const url  = card.dataset.url
-        const key  = `count_${name}`
-        const now  = parseInt(localStorage.getItem(key) || 0)
-        localStorage.setItem(key, now + 1)
-        window.open(url, '_blank')
-    })
-})
+function addCount(name) {
+    const key = `count_${name}`;
+    const now = parseInt(localStorage.getItem(key) || 0);
+    localStorage.setItem(key, now + 1);
+}
 
-window.onload = initCount
+function render() {
+    const container = document.getElementById("tool-container");
+    container.innerHTML = "";
+
+    toolList.forEach(sec => {
+        let secHtml = `
+        <section class="mb-12">
+            <h2 class="section-title"><i class="fa fa-${sec.icon} text-primary"></i> ${sec.section}</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        `;
+
+        sec.items.forEach(t => {
+            const count = initCount(t.name);
+            secHtml += `
+            <div class="tool-card bg-white p-4 rounded-xl flex flex-col items-center card-hover cursor-pointer"
+                 data-name="${t.name}" data-url="${t.url}">
+                <i class="fa fa-${t.icon} text-2xl text-${t.color}"></i>
+                <p class="text-sm mt-2">${t.name}</p>
+                <span class="text-xs text-gray-400 count">${count} 次</span>
+            </div>`;
+        });
+
+        secHtml += `</div></section>`;
+        container.innerHTML += secHtml;
+    });
+
+    document.querySelectorAll('.tool-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const name = card.dataset.name;
+            const url  = card.dataset.url;
+            addCount(name);
+            card.querySelector('.count').innerText = (parseInt(initCount(name)) + 1) + " 次";
+            window.open(url, '_blank');
+        });
+    });
+}
+
+window.onload = render;
 </script>
 </body>
 </html>

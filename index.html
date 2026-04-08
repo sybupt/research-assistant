@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科研助理导航</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        neutral: '#F5F7FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .section-title {
+                @apply text-lg md:text-xl font-semibold text-gray-800 mb-3 flex items-center gap-2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-neutral min-h-screen">
+<div class="max-w-7xl mx-auto px-4 py-8">
+    <header class="text-center mb-10">
+        <h1 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-primary mb-2">🧪 科研助理导航</h1>
+        <p class="text-gray-500">一站式工具集合 · 本地使用 · 访问计数</p>
+    </header>
+
+    <!-- 绘图工具 -->
+    <section class="mb-12">
+        <h2 class="section-title"><i class="fa fa-paint-brush text-primary"></i> 科研绘图工具</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="tool-card" data-url="https://mermaid.nodejs.cn" data-name="Mermaid">
+                <i class="fa fa-code-fork text-2xl text-blue-500"></i>
+                <p class="text-sm mt-2">Mermaid</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://flourish.studio" data-name="Flourish">
+                <i class="fa fa-line-chart text-2xl text-green-600"></i>
+                <p class="text-sm mt-2">Flourish</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.bic.ac.cn/ImageGP" data-name="ImageGP">
+                <i class="fa fa-bar-chart text-2xl text-red-500"></i>
+                <p class="text-sm mt-2">ImageGP</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://github.com/Tong-Chen/s-plot" data-name="s-plot">
+                <i class="fa fa-area-chart text-2xl text-orange-500"></i>
+                <p class="text-sm mt-2">s-plot</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.bic.ac.cn/EVenn/" data-name="E-Venn">
+                <i class="fa fa-circle-o text-2xl text-purple-500"></i>
+                <p class="text-sm mt-2">E-Venn</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://chiplot.online" data-name="ChiPlot">
+                <i class="fa fa-pie-chart text-2xl text-teal-500"></i>
+                <p class="text-sm mt-2">ChiPlot</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.rawgraphs.io" data-name="RAWgraphs">
+                <i class="fa fa-cubes text-2xl text-indigo-500"></i>
+                <p class="text-sm mt-2">RAWgraphs</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.graphpad.com/" data-name="GraphPad Prism">
+                <i class="fa fa-square text-2xl text-red-600"></i>
+                <p class="text-sm mt-2">GraphPad</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://biorender.com/" data-name="BioRender">
+                <i class="fa fa-flask text-2xl text-pink-500"></i>
+                <p class="text-sm mt-2">BioRender</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://matplotlib.org/" data-name="Matplotlib">
+                <i class="fa fa-python text-2xl text-blue-600"></i>
+                <p class="text-sm mt-2">Matplotlib</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学术搜索 -->
+    <section class="mb-10">
+        <h2 class="section-title"><i class="fa fa-search text-primary"></i> 学术搜索</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="tool-card" data-url="https://scholar.google.com" data-name="谷歌学术">
+                <i class="fa fa-google text-2xl text-blue-600"></i>
+                <p class="text-sm mt-2">谷歌学术</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://arxiv.org" data-name="arXiv">
+                <i class="fa fa-book text-2xl text-orange-500"></i>
+                <p class="text-sm mt-2">arXiv</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.cnki.net" data-name="知网">
+                <i class="fa fa-file-text text-2xl text-red-500"></i>
+                <p class="text-sm mt-2">知网</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据处理 -->
+    <section class="mb-10">
+        <h2 class="section-title"><i class="fa fa-table text-primary"></i> 数据 & 计算</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="tool-card" data-url="https://www.wolframalpha.com" data-name="Wolfram">
+                <i class="fa fa-calculator text-2xl text-indigo-500"></i>
+                <p class="text-sm mt-2">Wolfram</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.spsspro.com" data-name="SPSSPRO">
+                <i class="fa fa-bar-chart text-2xl text-teal-500"></i>
+                <p class="text-sm mt-2">SPSSPRO</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 邮箱 -->
+    <section class="mb-10">
+        <h2 class="section-title"><i class="fa fa-envelope text-primary"></i> 邮箱</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="tool-card" data-url="https://mail.163.com" data-name="163邮箱">
+                <i class="fa fa-envelope-o text-2xl text-gray-600"></i>
+                <p class="text-sm mt-2">163邮箱</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://mail.google.com" data-name="Gmail">
+                <i class="fa fa-google text-2xl text-red-500"></i>
+                <p class="text-sm mt-2">Gmail</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常用主页 -->
+    <section class="mb-10">
+        <h2 class="section-title"><i class="fa fa-home text-primary"></i> 常用主页</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="tool-card" data-url="https://github.com" data-name="GitHub">
+                <i class="fa fa-github text-2xl text-black"></i>
+                <p class="text-sm mt-2">GitHub</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.baidu.com" data-name="百度">
+                <i class="fa fa-search text-2xl text-blue-500"></i>
+                <p class="text-sm mt-2">百度</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 娱乐 -->
+    <section class="mb-10">
+        <h2 class="section-title"><i class="fa fa-gamepad text-primary"></i> 娱乐</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="tool-card" data-url="https://www.youku.com/ku/webhome" data-name="优酷">
+                <i class="fa fa-play-circle text-2xl text-red-500"></i>
+                <p class="text-sm mt-2">优酷</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.bilibili.com" data-name="哔哩哔哩">
+                <i class="fa fa-film text-2xl text-pink-500"></i>
+                <p class="text-sm mt-2">哔哩哔哩</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+            <div class="tool-card" data-url="https://www.xiaohongshu.com" data-name="小红书">
+                <i class="fa fa-heart text-2xl text-orange-500"></i>
+                <p class="text-sm mt-2">小红书</p>
+                <span class="text-xs text-gray-400 count">0 次</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+// 初始化计数
+function initCount() {
+    document.querySelectorAll('.tool-card').forEach(card => {
+        const name = card.dataset.name
+        const key = `count_${name}`
+        const count = localStorage.getItem(key) || 0
+        card.querySelector('.count').innerText = count + ' 次'
+    })
+}
+
+// 卡片样式 + 点击事件
+document.querySelectorAll('.tool-card').forEach(card => {
+    card.classList.add('bg-white','p-4','rounded-xl','flex','flex-col','items-center','card-hover','cursor-pointer')
+    card.addEventListener('click', () => {
+        const name = card.dataset.name
+        const url  = card.dataset.url
+        const key  = `count_${name}`
+        const now  = parseInt(localStorage.getItem(key) || 0)
+        localStorage.setItem(key, now + 1)
+        window.open(url, '_blank')
+    })
+})
+
+window.onload = initCount
+</script>
+</body>
+</html>
